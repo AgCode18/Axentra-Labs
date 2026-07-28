@@ -22,9 +22,6 @@ export function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-soft opacity-75" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-soft" />
             </span>
-            <span className="font-mono text-[11px] tracking-wider text-muted">
-              CURRENTLY BOOKING · Q3 2026 BUILD SLOTS
-            </span>
           </div>
 
           <h1 className="font-display font-semibold text-[13vw] leading-[0.92] tracking-tight md:text-[6.4rem] lg:text-[7.4rem] max-w-5xl animate-fade-up [animation-delay:80ms] opacity-0">
@@ -38,7 +35,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 max-w-xl text-base md:text-lg text-muted leading-relaxed animate-fade-up [animation-delay:180ms] opacity-0">
-            Axentra Labs is a full-stack product studio. We take your idea from
+            Axxentra Labs is a full-stack product studio. We take your idea from
             spec to a live, production-grade SaaS or MVP — designed, built,
             and shipped in three weeks flat.
           </p>

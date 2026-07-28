@@ -28,7 +28,7 @@ export function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-[72px] flex items-center justify-between">
-        <a href="#top" aria-label="Axentra Labs home" className="group">
+        <a href="#top" aria-label="Axxentra Labs home" className="group">
           <LogoFull className="transition-transform duration-300 group-hover:scale-[1.04]" />
         </a>
 
