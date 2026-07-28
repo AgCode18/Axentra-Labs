@@ -2,48 +2,44 @@
 
 import Link from "next/link";
 import { Reveal } from "./Reveal";
+import Image from "next/image";
 
-/**
- * EDIT ME — replace with your real, shipped projects before going live.
- * Placeholder entries are intentionally generic so nothing here reads
- * as a fabricated client case study.
- */
+
 const PROJECTS = [
     {
-        tag: "SAAS MVP",
-        name: "[Project Name]",
-        summary:
-            "[One or two sentences on what the product does and the core problem it solves for its users.]",
-        stack: ["Next.js", "Postgres", "Stripe"],
-        href: "#",
-        accent: "from-blue to-violet",
+        // tag: "SAAS MVP",
+        name: "Latte Laven Cafe",
+        image: "/projects/p-3.png",
+        summary: "[One or two sentences on what the product does and the core problem it solves for its users.]",
+        stack: ["React.js", "TailwindCSS", "MongoDB"],
+        href: "https://cafedummy.vercel.app/",
+
     },
     {
-        tag: "WEBSITE",
-        name: "[Project Name]",
-        summary:
-            "[What the site was for — marketing site, e-commerce, internal tool — and what made it a fast build.]",
-        stack: ["Next.js", "Tailwind", "Sanity CMS"],
-        href: "#",
-        accent: "from-violet to-blue",
+        // tag: "WEBSITE",
+        name: "Quirk",
+        image: "/projects/p-1.png",
+        summary: "[Quirk is a health & fitness tracker app that helps you set out realistic goals that you can accomplish without many hurdles. Sometimes, we keep bigger goals but end up help you keep fit.]",
+        stack: ["React.js", "TailwindCSS", "MongoDB"],
+        href: "https://gymdummy.vercel.app/",
+  
     },
     {
-        tag: "LANDING PAGE",
-        name: "[Project Name]",
-        summary:
-            "[What the launch or campaign was, and the outcome — waitlist size, signups, funding, etc.]",
-        stack: ["Next.js", "Tailwind", "Resend"],
-        href: "#",
-        accent: "from-blue to-violet",
+        // tag: "LANDING PAGE",
+        name: "Travel Bug",
+        image: "/projects/p-4.png",
+        summary: "[I developed a Travel Bug website using React.js, TailwindCSS, MongoDB, Figma incorporating smooth animations to create a visually immersive, interactive, and engaging user experience throughout the site.]",
+        stack: ["React.js", "TailwindCSS", "MongoDB", "Figma"],
+        href: "https://cozy-llama-cc3aa2.netlify.app/",
+       
     },
     {
-        tag: "REDESIGN",
-        name: "[Project Name]",
-        summary:
-            "[What was broken in the old product and what changed after the redesign shipped.]",
-        stack: ["Next.js", "Prisma", "Figma"],
-        href: "#",
-        accent: "from-violet to-blue",
+        // tag: "REDESIGN",
+        name: "Green Cart",
+        image: "/projects/p-2.png",
+        summary: "[Green Cart is a full stack grocery shopping application built with React, Node.js, and MongoDB. It features a user-friendly interface for browsing products, adding items to the cart, and managing orders.]",
+        stack: ["React.js", "Node.js", "MongoDB", "Figma",],
+        href: "https://greencart-green-beta.vercel.app/",
     },
 ];
 
@@ -69,35 +65,27 @@ export function Projects() {
                                 className="card-lift group relative block rounded-2xl border border-line bg-ink overflow-hidden hover:border-blue/40"
                             >
                                 {/* thumbnail placeholder — swap for a real screenshot/image */}
-                                <div
-                                    className={`relative h-48 md:h-56 bg-gradient-to-br ${p.accent} overflow-hidden`}
-                                >
-                                    <div
-                                        aria-hidden
-                                        className="absolute inset-0 opacity-20"
-                                        style={{
-                                            backgroundImage:
-                                                "linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)",
-                                            backgroundSize: "28px 28px",
-                                        }}
+                                <div className="relative h-48 md:h-56 overflow-hidden">
+                                    <Image
+                                        src={p.image}
+                                        alt={p.name}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
 
+                                    <div className="absolute inset-0 bg-black/30" />
+
                                     <div className="absolute inset-0 flex items-center justify-center">
-                                        <span className="font-display font-semibold text-white/90 text-2xl tracking-tight">
+                                        <span className="font-display font-semibold text-white text-2xl tracking-tight">
                                             {p.name}
                                         </span>
                                     </div>
-
-                                    <div
-                                        aria-hidden
-                                        className="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition-colors duration-300"
-                                    />
                                 </div>
 
                                 <div className="p-7 md:p-8">
-                                    <span className="font-mono text-[11px] tracking-widest text-muted-2">
+                                    {/* <span className="font-mono text-[11px] tracking-widest text-muted-2">
                                         {p.tag}
-                                    </span>
+                                    </span> */}
 
                                     <h3 className="font-display font-semibold text-xl mt-2 mb-3 transition-transform duration-300 group-hover:translate-x-1">
                                         {p.name}
