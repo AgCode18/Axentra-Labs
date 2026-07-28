@@ -27,10 +27,10 @@ export function CTA() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:hello@axentralabs.com"
+              href="mailto:axentralabsofficial@gmail.com"
               className="shine-wrap group inline-flex items-center gap-2 rounded-full bg-grad-brand text-white text-sm font-medium px-7 py-4 shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-12px_rgba(62,107,255,0.5)] active:translate-y-0"
             >
-              hello@axentralabs.com
+              Contact us
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-300 group-hover:translate-x-1">
                 <path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

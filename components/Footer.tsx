@@ -1,4 +1,4 @@
-import { LogoFull } from "./Logo";
+import { LogoFull, LogoMark } from "./Logo";
 
 export function Footer() {
   return (
@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-16">
         <div className="flex flex-col md:flex-row justify-between gap-12">
           <div className="max-w-xs group w-fit">
-            <LogoFull className="transition-transform duration-300 group-hover:scale-[1.03] w-fit" />
+            <LogoMark className="transition-transform duration-300 group-hover:scale-[1.03] w-fit" />
             <p className="text-muted text-sm mt-5 leading-relaxed">
               Full-stack product studio. SaaS and MVP builds, designed and
               shipped in 21 days.

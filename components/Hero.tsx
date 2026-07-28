@@ -1,8 +1,8 @@
-import { LogoMark } from "./Logo";
+// import { LogoMark } from "./Logo";
 
 export function Hero() {
   return (
-    <section id="top" className="relative pt-32 md:pt-40 pb-0 overflow-hidden">
+    <section id="home" className="relative pt-32 md:pt-40 pb-0 overflow-hidden">
       {/* ambient gradient field */}
       <div className="absolute inset-0 bg-grad-radial-fade pointer-events-none" />
       <div className="noise-layer" />
@@ -19,8 +19,8 @@ export function Hero() {
         <div className="flex flex-col items-start">
           <div className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/60 px-4 py-1.5 mb-8 animate-fade-up">
             <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-soft opacity-75" />
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-soft" />
+              {/* <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-soft opacity-75" /> */}
+              {/* <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-soft" /> */}
             </span>
           </div>
 
@@ -84,7 +84,7 @@ export function Hero() {
           style={{ clipPath: "polygon(0 100%, 50% 0, 100% 100%)" }}
         />
         <div className="absolute left-1/2 -translate-x-1/2 bottom-0">
-          <LogoMark className="h-6 w-6 md:h-8 md:w-8 mb-1 opacity-90" />
+          {/* <LogoMark className="h-6 w-6 md:h-8 md:w-8 mb-1 opacity-90" /> */}
         </div>
       </div>
     </section>
