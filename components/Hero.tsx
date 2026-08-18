@@ -34,9 +34,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 max-w-xl text-base md:text-lg text-muted leading-relaxed animate-fade-up [animation-delay:180ms] opacity-0">
-            Axxentra Labs is a full-stack product studio. We take your idea from
-            spec to a live, production-grade SaaS or MVP — designed, built,
-            and shipped in three weeks flat.
+            Axxentra Labs helps startups and growing businesses turn ideas and business problems into modern websites, web applications, e-commerce platforms, and custom software.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up [animation-delay:260ms] opacity-0">
