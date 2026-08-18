@@ -25,11 +25,10 @@ export function Hero() {
           </div>
 
           <h1 className="font-display font-semibold text-[13vw] leading-[0.92] tracking-tight md:text-[6.4rem] lg:text-[7.4rem] max-w-5xl animate-fade-up [animation-delay:80ms] opacity-0">
-            Ship your SaaS
+            We Build Websites & Software 
             <br />
-            in{" "}
             <span className="text-gradient relative inline-block">
-              21 days
+              That Grow Your Business
             </span>
             .
           </h1>
