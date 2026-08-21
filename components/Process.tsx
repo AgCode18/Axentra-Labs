@@ -51,7 +51,7 @@ export function Process() {
                   </div>
                   <div className="pt-2 flex-1 grid md:grid-cols-[1fr_2fr] gap-2 md:gap-10 border-b border-line-soft pb-12 md:pb-16">
                     <div>
-                      <span className="font-mono text-[11px] tracking-widest text-muted-2">{s.days}</span>
+                      <span className="font-mono text-[11px] tracking-widest text-black-2">{s.days}</span>
                       <h3 className="font-display font-semibold text-2xl md:text-3xl mt-2 transition-colors duration-300 group-hover:text-blue">{s.title}</h3>
                     </div>
                     <p className="text-muted text-sm md:text-base leading-relaxed max-w-lg">{s.desc}</p>

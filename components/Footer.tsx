@@ -19,12 +19,12 @@ export function Footer() {
               <ul className="mt-4 space-y-3">
                 {[
                   ["Process", "#process"],
-                  ["Work", "#work"],
+                  ["Services", "#work"],
                   ["Pricing", "#pricing"],
                   ["FAQ", "#faq"],
                 ].map(([label, href]) => (
                   <li key={href}>
-                    <a href={href} className="link-underline text-sm text-muted hover:text-fog transition-colors pb-0.5">
+                    <a href={href} className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
                       {label}
                     </a>
                   </li>
@@ -35,8 +35,8 @@ export function Footer() {
             <div>
               <span className="font-mono text-[11px] tracking-widest text-muted-2">SERVICES</span>
               <ul className="mt-4 space-y-3">
-                {["SaaS MVPs", "Websites", "Landing Pages", "Redesigns"].map((s) => (
-                  <li key={s} className="text-sm text-muted hover:text-fog transition-colors cursor-default">{s}</li>
+                {["SaaS MVPs", "Websites", "Landing Pages", "Re-Designs", "Fin-tech"].map((s) => (
+                  <li key={s} className="text-sm text-black hover:text-fog transition-colors cursor-default">{s}</li>
                 ))}
               </ul>
             </div>
@@ -45,11 +45,11 @@ export function Footer() {
               <span className="font-mono text-[11px] tracking-widest text-muted-2">CONTACT</span>
               <ul className="mt-4 space-y-3">
                 <li>
-                  <a href="mailto:hello@axentralabs.com" className="link-underline text-sm text-muted hover:text-fog transition-colors pb-0.5">
-                    hello@axentralabs.com
+                  <a href="mailto:axentralabsofficial@gmail.com" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
+                    Email
                   </a>
                 </li>
-                <li className="text-sm text-muted">Jaipur, India</li>
+                <li className="text-sm text-black">Jaipur, India</li>
               </ul>
             </div>
           </div>

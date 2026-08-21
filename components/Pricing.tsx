@@ -4,10 +4,10 @@ const PLANS = [
   {
     name: "Landing Page",
     desc: "A single high-converting page, designed and built fast.",
-    price: "$1,499",
-    period: "one-time",
+    price: "₹3,499",
+    period: "Domain + Hosting",
     features: [
-      "Live in 7 days",
+      "Live in 5 days",
       "Custom UI, no templates",
       "Fully responsive",
       "Analytics + SEO basics",
@@ -16,14 +16,15 @@ const PLANS = [
     cta: "Book a call",
     featured: false,
   },
+
   {
     name: "MVP Sprint",
     desc: "Idea to a live, testable product in 21 days flat.",
-    price: "$5,999",
-    period: "fixed price",
+    price: "₹49,999",
+    period: "",
     features: [
       "3–4 core features",
-      "Full-stack build (Next.js + Postgres)",
+      "Full-stack build (Next.js + MySql)",
       "Auth, billing & admin dashboard",
       "Daily staging updates",
       "Production deploy + handoff",
@@ -32,11 +33,12 @@ const PLANS = [
     cta: "Start your build",
     featured: true,
   },
+
   {
-    name: "Build Partner",
-    desc: "Ongoing engineering after launch, billed monthly.",
-    price: "$3,200",
-    period: "/ month",
+    name: "Enterprise",
+    desc: "Tailored to your needs.",
+    price: "Custom",
+    period: "",
     features: [
       "40 dev hours per month",
       "Weekly strategy call",
@@ -84,7 +86,7 @@ export function Pricing() {
                 </div>
                 <ul className="space-y-3 mb-9 flex-1">
                   {p.features.map((f) => (
-                    <li key={f} className="group/item flex items-start gap-2.5 text-sm text-muted">
+                    <li key={f} className="group/item flex items-start gap-2.5 text-sm text-black">
                       <svg className="mt-1 shrink-0 transition-transform duration-300 group-hover/item:scale-125" width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <path d="M11.5 3.5L5.5 10.5L2.5 7.5" stroke="#3E6BFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
