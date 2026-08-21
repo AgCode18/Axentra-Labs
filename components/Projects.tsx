@@ -94,7 +94,7 @@ const PROJECTS = [
     stack: ["React.js", "TailwindCSS", "MongoDB"],
     href: "https://gymdummy.vercel.app/",
   },
-  
+
   {
     // tag: "LANDING PAGE",
     name: "Travel Bug",
@@ -105,16 +105,15 @@ const PROJECTS = [
     href: "https://cozy-llama-cc3aa2.netlify.app/",
   },
 
-  {
-    // tag: "REDESIGN",
-    name: "Green Cart",
-    image: "/projects/p-2.png",
-    summary:
-      "[Green Cart is a full stack grocery shopping application built with React, Node.js, and MongoDB. It features a user-friendly interface for browsing products, adding items to the cart, and managing orders.]",
-    stack: ["React.js", "Node.js", "MongoDB", "Figma"],
-    href: "https://greencart-green-beta.vercel.app/",
-  },
-
+  // {
+  //   // tag: "REDESIGN",
+  //   name: "Green Cart",
+  //   image: "/projects/p-2.png",
+  //   summary:
+  //     "[Green Cart is a full stack grocery shopping application built with React, Node.js, and MongoDB. It features a user-friendly interface for browsing products, adding items to the cart, and managing orders.]",
+  //   stack: ["React.js", "Node.js", "MongoDB", "Figma"],
+  //   href: "https://greencart-green-beta.vercel.app/",
+  // },
 ];
 
 export function Projects() {

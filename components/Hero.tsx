@@ -1,132 +1,88 @@
-"use client";
+// import { LogoMark } from "./Logo";
 
-import { useEffect, useState } from "react";
-// import { LogoFull } from "./Logo";
-
-const LINKS = [
-  { href: "#process", label: "Process" },
-  { href: "#work", label: "Services" },
-  { href: "#projects", label: "Our Works" },
-  { href: "#pricing", label: "Pricing" },
-  // { href: "#faq", label: "FAQ" },
-];
-
-export function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
+export function Hero() {
   return (
-    <header
-      className={`fixed top-3 sm:top-4 inset-x-0 z-50 transition-all duration-300 mx-3 sm:mx-6 rounded-2xl ${
-        scrolled
-          ? "bg-ink/85 backdrop-blur-md border border-line-soft shadow-xl"
-          : "bg-ink/50 backdrop-blur-sm border border-line-soft/40 shadow-md"
-      }`}
-    >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-[72px] flex items-center justify-between">
-        {/* Logo – explicitly on the left */}
-        <a
-          href="#home"
-          aria-label="Axxentra Labs home"
-          className="group flex-shrink-0"
-        >
-          {/* <LogoFull className="transition-transform duration-300 group-hover:scale-[1.04]" /> */}
-        </a>
+    <section id="home" className="relative pt-32 md:pt-40 pb-0 overflow-hidden">
+      {/* ambient gradient field */}
+      <div className="absolute inset-0 bg-grad-radial-fade pointer-events-none" />
+      <div className="noise-layer" />
+      <div
+        aria-hidden
+        className="absolute -top-40 right-[-10%] w-[560px] h-[560px] rounded-full bg-violet/10 blur-[140px] pointer-events-none animate-float-slow"
+      />
+      <div
+        aria-hidden
+        className="absolute top-20 left-[-10%] w-[480px] h-[480px] rounded-full bg-blue/10 blur-[140px] pointer-events-none animate-float"
+      />
 
-        {/* Desktop nav links – centered */}
-        <ul className="hidden md:flex items-center gap-8 lg:gap-10">
-          {LINKS.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="link-underline text-sm text-black/80 hover:text-black transition-colors pb-0.5"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+      <div className="relative max-w-7xl mx-auto px-5 md:px-8">
+        <div className="flex flex-col items-start">
+          <div className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/60 px-4 py-1.5 mb-8 animate-fade-up">
+            <span className="relative flex h-1.5 w-1.5">
+              {/* <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-soft opacity-75" /> */}
+              {/* <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-soft" /> */}
+            </span>
+          </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-fog text-white text-sm font-medium px-5 py-2.5 transition-all duration-300 hover:shadow-[0_8px_24px_-6px_rgba(11,13,24,0.4)] hover:-translate-y-0.5 active:translate-y-0"
-          >
-            Book a call
-          </a>
-        </div>
+          <h1 className="font-display font-semibold text-[13vw] leading-[0.92] tracking-tight md:text-[6.4rem] lg:text-[7.4rem] max-w-5xl animate-fade-up [animation-delay:80ms] opacity-0">
+            We Build Websites & Software 
+            <br />
+            <span className="text-gradient relative inline-block">
+              That Grow Your Business
+            </span>
+          </h1>
 
-        {/* Mobile menu toggle */}
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden text-fog p-2 -mr-2"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-            {open ? (
-              <path
-                d="M5 5L17 17M17 5L5 17"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-              />
-            ) : (
-              <>
-                <path
-                  d="M3 6H19"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M3 11H19"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M3 16H19"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                />
-              </>
-            )}
-          </svg>
-        </button>
-      </nav>
+          <p className="mt-8 max-w-xl text-base md:text-lg text-black leading-relaxed animate-fade-up [animation-delay:180ms] opacity-0">
+            Axentra Labs helps startups and growing businesses turn ideas and business problems into modern websites, web applications, e-commerce platforms, and custom software.
+          </p>
 
-      {/* Mobile menu dropdown – rounded bottom to match header */}
-      {open && (
-        <div className="md:hidden bg-ink/95 backdrop-blur-sm border-t border-line-soft/60 px-5 pb-6 pt-2 flex flex-col gap-1 rounded-b-2xl">
-          {LINKS.map((l) => (
+          <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up [animation-delay:260ms] opacity-0">
             <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="py-3 text-base text-muted hover:text-fog hover:pl-1.5 transition-all duration-200 border-b border-line-soft/40"
+              href="#contact"
+              className="shine-wrap group inline-flex items-center gap-2 rounded-full bg-grad-brand text-white text-sm font-medium px-6 py-3.5 shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-10px_rgba(62,107,255,0.5)] active:translate-y-0"
             >
-              {l.label}
+              Start your build
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-300 group-hover:translate-x-1">
+                <path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </a>
-          ))}
-          <a
-            href="#contact"
-            onClick={() => setOpen(false)}
-            className="mt-4 text-center rounded-full bg-fog text-white text-sm font-medium px-5 py-3 transition-transform active:scale-95"
-          >
-            Book a call
-          </a>
+            <a
+              href="#work"
+              className="group inline-flex items-center gap-2 rounded-full border border-line text-sm font-medium px-6 py-3.5 text-fog transition-all duration-300 hover:border-blue/50 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(21,26,53,0.25)] active:translate-y-0"
+            >
+              See how we build
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-300 group-hover:translate-x-1">
+                <path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="#0B0D18" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
+
+          <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 pb-16 animate-fade-up [animation-delay:340ms] opacity-0">
+            {[
+              ["21", "day build cycle"],
+              ["Fixed", "price, no surprise invoices"],
+              ["100%", "code ownership on handoff"],
+            ].map(([big, small]) => (
+              <div key={small} className="group flex items-baseline gap-2 cursor-default">
+                <span className="font-display font-semibold text-2xl md:text-3xl text-fog transition-colors duration-300 group-hover:text-blue">{big}</span>
+                <span className="font-mono text-[11px] text-black-2 max-w-[8rem] leading-tight">{small}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      )}
-    </header>
+      </div>
+
+      {/* signature chevron divider — echoes the apex of the logo's A */}
+      <div className="relative h-16 md:h-24">
+        <div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-full bg-surface"
+          style={{ clipPath: "polygon(0 100%, 50% 0, 100% 100%)" }}
+        />
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-0">
+          {/* <LogoMark className="h-6 w-6 md:h-8 md:w-8 mb-1 opacity-90" /> */}
+        </div>
+      </div>
+    </section>
   );
 }
