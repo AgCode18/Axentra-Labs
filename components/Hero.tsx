@@ -30,7 +30,6 @@ export function Hero() {
             <span className="text-gradient relative inline-block">
               That Grow Your Business
             </span>
-            .
           </h1>
 
           <p className="mt-8 max-w-xl text-base md:text-lg text-muted leading-relaxed animate-fade-up [animation-delay:180ms] opacity-0">

@@ -1,4 +1,4 @@
-// File: D:\ConverterProject\axxe\Axentra-Labs\app\layout.tsx
+// File: D:\azzunique sohail\Anuj Azz\c\Axentra-Labs\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

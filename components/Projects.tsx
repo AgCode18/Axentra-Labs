@@ -6,6 +6,87 @@ import Image from "next/image";
 
 
 const PROJECTS = [
+    
+    {
+        // tag: "Salon",
+        name: "Latte Laven Cafe",
+        image: "/projects/p-3.png",
+        summary: "[One or two sentences on what the product does and the core problem it solves for its users.]",
+        stack: ["React.js", "TailwindCSS", "GSAP"],
+        href: "https://salondummy.vercel.app/",
+
+    },
+    {
+        // tag: "Dental",
+        name: "Dentoi",
+        image: "",
+        summary: "[One or two sentences on what the product does and the core problem it solves for its users.]",
+        stack: ["React.js", "TailwindCSS", "GSAP"],
+        href: "https://dainteldummy.vercel.app/",
+
+    },
+    {
+        // tag: "cafe",
+        name: "Latte Laven Cafe",
+        image: "/projects/p-3.png",
+        summary: "[One or two sentences on what the product does and the core problem it solves for its users.]",
+        stack: ["React.js", "TailwindCSS", "MongoDB"],
+        href: "https://cafedummy.vercel.app/",
+
+    },
+    {
+        // tag: "KingfishLogistics",
+        name: "KingfishLogistics",
+        image: "/projects/p-3.png",
+        summary: "[One or two sentences on what the product does and the core problem it solves for its users.]",
+        stack: ["React.js", "TailwindCSS", "MongoDB"],
+        href: "https://www.kingfishlogistics.in/",
+
+    },
+
+    {
+        // tag: "SAAS MVP",
+        name: "E-Commerce",
+        image: "/projects/p-3.png",
+        summary: "[One or two sentences on what the product does and the core problem it solves for its users.]",
+        stack: ["React.js", "TailwindCSS", "MongoDB"],
+        href: "https://omenterprisesjpr.com/",
+    },
+
+
+    {
+        // tag: "API Panel",
+        name: "API Panel",
+        image: "/projects/p-3.png",
+        summary: "[One or two sentences on what the product does and the core problem it solves for its users.]",
+        stack: ["React.js", "TailwindCSS", "MongoDB"],
+        href: "https://apipanel.azzunique.cloud/login",
+    },
+
+    {
+        // tag: "LMS",
+        name: "Loan Management System",
+        image: "/projects/p-3.png",
+        summary: "[One or two sentences on what the product does and the core problem it solves for its users.]",
+        stack: ["React.js", "TailwindCSS", "MongoDB"],
+        href: "https://mascotfin.com/",
+    },
+
+    {
+        // tag: "Fintech",
+        name: "Reseller Fintech",
+        image: "/projects/p-3.png",
+        summary: "[One or two sentences on what the product does and the core problem it solves for its users.]",
+        stack: ["React.js", "TailwindCSS", "MongoDB"],
+        href: "https://superadmin.bankfipay.com/",
+    },
+
+
+
+
+
+
+
     {
         // tag: "SAAS MVP",
         name: "Latte Laven Cafe",
