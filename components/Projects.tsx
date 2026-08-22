@@ -88,7 +88,7 @@ const PROJECTS = [
   {
     // tag: "cafe",
     name: "Latte Laven Cafe",
-    image: "/projects/p-3.png",
+    image: "/projects/P-3.png",
     summary:
       "[One or two sentences on what the product does and the core problem it solves for its users.]",
     stack: ["React.js", "TailwindCSS", "MongoDB"],
