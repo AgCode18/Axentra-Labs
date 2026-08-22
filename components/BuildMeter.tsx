@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
  * becomes a fixed progress rail that fills as the visitor scrolls —
  * a visual metaphor for a build progressing day by day toward launch.
  */
+
 export function BuildMeter() {
   const [progress, setProgress] = useState(0);
 

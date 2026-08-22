@@ -56,11 +56,15 @@ export function Pricing() {
     <section id="pricing" className="relative bg-surface py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <Reveal className="text-center max-w-2xl mx-auto">
-          <span className="font-mono text-xs tracking-[0.25em] text-blue-soft">PRICING</span>
+          <span className="font-mono text-xs tracking-[0.25em] text-blue-soft">
+            PRICING
+          </span>
           <h2 className="font-display font-semibold text-3xl md:text-5xl mt-4 leading-[1.1]">
             Pick your starting point.
           </h2>
-          <p className="mt-5 text-muted">One clear number. No hourly billing, no scope games.</p>
+          <p className="mt-5 text-muted">
+            One clear number. No hourly billing, no scope games.
+          </p>
         </Reveal>
 
         <div className="grid lg:grid-cols-3 gap-6 mt-16">
@@ -81,16 +85,37 @@ export function Pricing() {
                 <h3 className="font-display font-semibold text-xl">{p.name}</h3>
                 <p className="text-muted text-sm mt-2 mb-6">{p.desc}</p>
                 <div className="flex items-baseline gap-2 mb-8">
-                  <span className="font-display font-semibold text-4xl">{p.price}</span>
-                  <span className="text-muted-2 text-sm font-mono">{p.period}</span>
+                  <span className="font-display font-semibold text-4xl">
+                    {p.price}
+                  </span>
+                  <span className="text-muted-2 text-sm font-mono">
+                    {p.period}
+                  </span>
                 </div>
                 <ul className="space-y-3 mb-9 flex-1">
                   {p.features.map((f) => (
-                    <li key={f} className="group/item flex items-start gap-2.5 text-sm text-black">
-                      <svg className="mt-1 shrink-0 transition-transform duration-300 group-hover/item:scale-125" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M11.5 3.5L5.5 10.5L2.5 7.5" stroke="#3E6BFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <li
+                      key={f}
+                      className="group/item flex items-start gap-2.5 text-sm text-black"
+                    >
+                      <svg
+                        className="mt-1 shrink-0 transition-transform duration-300 group-hover/item:scale-125"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M11.5 3.5L5.5 10.5L2.5 7.5"
+                          stroke="#3E6BFF"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
                       </svg>
-                      <span className="transition-colors duration-300 group-hover/item:text-fog">{f}</span>
+                      <span className="transition-colors duration-300 group-hover/item:text-fog">
+                        {f}
+                      </span>
                     </li>
                   ))}
                 </ul>
