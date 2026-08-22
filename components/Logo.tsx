@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/public/axxe.png";
+import logo from "@/public/logocm.png";
 import logos from "@/public/axxe2.png"
 
 export function LogoMark({ className = "h-10 w-auto" }: { className?: string }) {
