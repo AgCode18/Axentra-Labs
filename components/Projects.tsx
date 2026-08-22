@@ -75,25 +75,25 @@ const PROJECTS = [
     href: "https://dainteldummy.vercel.app/",
   },
 
-  {
-    // tag: "Dental",
-    name: "Dentoi",
-    image: "/projects/dental.png",
-    summary:
-      "[One or two sentences on what the product does and the core problem it solves for its users.]",
-    stack: ["React.js", "TailwindCSS", "GSAP"],
-    href: "https://dainteldummy.vercel.app/",
-  },
-
   // {
-  //   // tag: "cafe",
-  //   name: "Latte Laven Cafe",
-  //   image: "/projects/p-3.png",
+  //   // tag: "Dental",
+  //   name: "Cafe",
+  //   image: "",
   //   summary:
   //     "[One or two sentences on what the product does and the core problem it solves for its users.]",
-  //   stack: ["React.js", "TailwindCSS", "MongoDB"],
-  //   href: "https://cafedummy.vercel.app/",
+  //   stack: ["React.js", "TailwindCSS", "GSAP"],
+  //   href: "https://dainteldummy.vercel.app/",
   // },
+
+  {
+    // tag: "cafe",
+    name: "Latte Laven Cafe",
+    image: "/projects/p-3.png",
+    summary:
+      "[One or two sentences on what the product does and the core problem it solves for its users.]",
+    stack: ["React.js", "TailwindCSS", "MongoDB"],
+    href: "https://cafedummy.vercel.app/",
+  },
 
   {
     // tag: "WEBSITE",
