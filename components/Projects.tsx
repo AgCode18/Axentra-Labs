@@ -4,7 +4,15 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 import Image from "next/image";
 
-const PROJECTS = [
+type Project = {
+  name: string;
+  image: string;
+  summary: string;
+  stack: string[];
+  href: string;
+};
+
+const PROJECTS: Project[] = [
   {
     // tag: "KingfishLogistics",
     name: "KingfishLogistics",
@@ -101,14 +109,14 @@ const PROJECTS = [
     image: "/projects/p-4.png",
     summary:
       "I developed a Travel Bug website using React.js, TailwindCSS, MongoDB, Figma, incorporating smooth animations to create a visually immersive, interactive, and engaging user experience throughout the site.]",
-    stack: ["React.js", "TailwindCSS", "MongoDB", "Figma",
+    stack: ["React.js", "TailwindCSS", "MongoDB", "Figma"],
     href: "https://cozy-llama-cc3aa2.netlify.app/",
   },
   
   {
     // tag: "LANDING PAGE",
     name: "Real Estate",
-    // image: "/projects/p-4.png",
+    image: "/projects/p-2.png",
     summary:
       "I developed a Travel Bug website using React.js, TailwindCSS, MongoDB, Figma incorporating smooth animations to create a visually immersive, interactive, and engaging user experience throughout the site.",
     stack: ["Next.js", "TailwindCSS", "Figma"],
