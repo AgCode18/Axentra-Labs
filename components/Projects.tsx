@@ -108,7 +108,7 @@ const PROJECTS = [
   {
     // tag: "LANDING PAGE",
     name: "Real Estate",
-    image: "/projects/p-4.png",
+    // image: "/projects/p-4.png",
     summary:
       "I developed a Travel Bug website using React.js, TailwindCSS, MongoDB, Figma incorporating smooth animations to create a visually immersive, interactive, and engaging user experience throughout the site.",
     stack: ["Next.js", "TailwindCSS", "Figma"],
