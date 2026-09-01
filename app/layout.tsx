@@ -24,13 +24,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Axentra Labs — Ship Your SaaS MVP in 21 Days",
-  description:
-    "Axentra Labs designs and builds production-ready SaaS products and MVPs in 21 days. Next.js, full-stack engineering, fixed pricing, zero fluff.",
+  title: "Axentra Labs",
+  description: "Axentra Labs designs and builds production-ready SaaS products and MVPs in 21 days. Next.js, full-stack engineering, fixed pricing, zero fluff.",
   openGraph: {
-    title: "Axentra Labs — Ship Your SaaS MVP in 21 Days",
-    description:
-      "We design, build, and launch production-ready web products for founders who can't wait six months.",
+    title: "Axentra Labs",
+    description:  "We design, build, and launch production-ready web products for founders who can't wait six months.",
     type: "website",
   },
 };

@@ -4,13 +4,21 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 import Image from "next/image";
 
-const PROJECTS = [
+type Project = {
+  name: string;
+  image: string;
+  summary: string;
+  stack: string[];
+  href: string;
+};
+
+const PROJECTS: Project[] = [
   {
     // tag: "KingfishLogistics",
     name: "KingfishLogistics",
     image: "/projects/logistic.png",
     summary:
-      "[One or two sentences on what the product does and the core problem it solves for its users.]",
+      "One or two sentences on what the product does and the core problem it solves for its users.",
     stack: ["React.js", "TailwindCSS", "MongoDB"],
     href: "https://www.kingfishlogistics.in/",
   },
@@ -20,7 +28,7 @@ const PROJECTS = [
     name: "E-Commerce",
     image: "/projects/e-comi.png",
     summary:
-      "[One or two sentences on what the product does and the core problem it solves for its users.]",
+      "One or two sentences on what the product does and the core problem it solves for its users.",
     stack: ["React.js", "TailwindCSS", "MongoDB"],
     href: "https://omenterprisesjpr.com/",
   },
@@ -30,7 +38,7 @@ const PROJECTS = [
     name: "API Panel",
     image: "/projects/api.png",
     summary:
-      "[One or two sentences on what the product does and the core problem it solves for its users.]",
+      "One or two sentences on what the product does and the core problem it solves for its users.",
     stack: ["React.js", "TailwindCSS", "MongoDB"],
     href: "https://apipanel.azzunique.cloud/login",
   },
@@ -40,7 +48,7 @@ const PROJECTS = [
     name: "Loan Management System",
     image: "/projects/lmsimage.png",
     summary:
-      "[One or two sentences on what the product does and the core problem it solves for its users.]",
+      "One or two sentences on what the product does and the core problem it solves for its users.",
     stack: ["React.js", "TailwindCSS", "MongoDB"],
     href: "https://mascotfin.com/",
   },
@@ -50,7 +58,7 @@ const PROJECTS = [
     name: "Reseller Fintech",
     image: "/projects/reseller.png",
     summary:
-      "[One or two sentences on what the product does and the core problem it solves for its users.]",
+      "One or two sentences on what the product does and the core problem it solves for its users.",
     stack: ["React.js", "TailwindCSS", "MongoDB"],
     href: "https://superadmin.bankfipay.com/",
   },
@@ -60,7 +68,7 @@ const PROJECTS = [
     name: "Salon",
     image: "/projects/salon.png",
     summary:
-      "[One or two sentences on what the product does and the core problem it solves for its users.]",
+      "One or two sentences on what the product does and the core problem it solves for its users.",
     stack: ["React.js", "TailwindCSS", "GSAP"],
     href: "https://salondummy.vercel.app/",
   },
@@ -70,7 +78,7 @@ const PROJECTS = [
     name: "Dentoi",
     image: "/projects/dental.png",
     summary:
-      "[One or two sentences on what the product does and the core problem it solves for its users.]",
+      "One or two sentences on what the product does and the core problem it solves for its users.",
     stack: ["React.js", "TailwindCSS", "GSAP"],
     href: "https://dainteldummy.vercel.app/",
   },
@@ -80,7 +88,7 @@ const PROJECTS = [
     name: "Latte Laven Cafe",
     image: "/projects/P-3.png",
     summary:
-      "[One or two sentences on what the product does and the core problem it solves for its users.]",
+      "One or two sentences on what the product does and the core problem it solves for its users.",
     stack: ["React.js", "TailwindCSS", "MongoDB"],
     href: "https://cafedummy.vercel.app/",
   },
@@ -90,7 +98,7 @@ const PROJECTS = [
     name: "Quirk",
     image: "/projects/p-1.png",
     summary:
-      "[Quirk is a health & fitness tracker app that helps you set out realistic goals that you can accomplish without many hurdles. Sometimes, we keep bigger goals but end up help you keep fit.]",
+      "Quirk is a health & fitness tracker app that helps you set out realistic goals that you can accomplish without many hurdles. Sometimes, we keep bigger goals but end up help you keep fit.",
     stack: ["React.js", "TailwindCSS", "MongoDB"],
     href: "https://gymdummy.vercel.app/",
   },
@@ -100,9 +108,19 @@ const PROJECTS = [
     name: "Travel Bug",
     image: "/projects/p-4.png",
     summary:
-      "[I developed a Travel Bug website using React.js, TailwindCSS, MongoDB, Figma incorporating smooth animations to create a visually immersive, interactive, and engaging user experience throughout the site.]",
+      "I developed a Travel Bug website using React.js, TailwindCSS, MongoDB, Figma, incorporating smooth animations to create a visually immersive, interactive, and engaging user experience throughout the site.]",
     stack: ["React.js", "TailwindCSS", "MongoDB", "Figma"],
     href: "https://cozy-llama-cc3aa2.netlify.app/",
+  },
+  
+  {
+    // tag: "LANDING PAGE",
+    name: "Real Estate",
+    image: "/projects/realstate.png",
+    summary:
+      "I developed a Travel Bug website using React.js, TailwindCSS, MongoDB, Figma incorporating smooth animations to create a visually immersive, interactive, and engaging user experience throughout the site.",
+    stack: ["Next.js", "TailwindCSS", "Figma"],
+    href: "https://real-estate-phi-blond.vercel.app/",
   },
 
 ];
