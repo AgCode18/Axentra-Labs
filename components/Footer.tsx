@@ -47,10 +47,7 @@ export function Footer() {
                 <li>
                   <a href="mailto:axentralabsofficial@gmail.com" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
                     axentralabsofficial@gmail.com
-                  </a>
-                  <a href="tel:+919829012345" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
-                    +91 98290 12345
-                  </a>
+                  </a>                 
                   <a href="tel:+917665227565" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
                     +91 76652 27565
                   </a>
