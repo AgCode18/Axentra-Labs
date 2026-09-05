@@ -97,7 +97,7 @@ export default function Footer() {
     <footer className="bg-[#f3f4f9] px-5 pb-8 text-black md:px-8">
       <div className="mx-auto max-w-[1400px]">
         {/* Main Footer */}
-        <div className="grid gap-16 border-t border-white/10 py-16 md:grid-cols-[2fr_1fr_1fr]">
+        <div className="grid gap-16 border-t border-white/10 py-16 md:grid-cols-[2fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div>
             <Link
@@ -133,37 +133,36 @@ export default function Footer() {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
+
           ))}
-=======
 
-            <div>
-              <span className="font-mono text-[11px] tracking-widest text-muted-2">CONTACT</span>
-              <ul className="mt-4 space-y-3">
-                <li>
-                  <a href="mailto:axentralabsofficial@gmail.com" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
-                    axentralabsofficial@gmail.com
-                  </a> <br />
-                  
-                  <a href="tel:+917665227565" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
-                    +91 76652 27565
-                  </a>
-                </li>
-                <li className="text-sm text-black">Jaipur, India</li>
-              </ul>
-            </div>
+
+          <div>
+            <span className="font-mono text-[11px] tracking-widest text-muted-2">CONTACT</span>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <a href="mailto:axentralabsofficial@gmail.com" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
+                  axentralabsofficial@gmail.com
+                </a> <br />
+
+                <a href="tel:+917665227565" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
+                  +91 76652 27565
+                </a>
+              </li>
+              <li className="text-sm text-black">Jaipur, India</li>
+            </ul>
           </div>
->>>>>>> d99a6ce633a5b8d1e2ffb1858f0f7b349e8c4912
         </div>
+      </div>
 
-        {/* Bottom */}
-        <div className="flex flex-col gap-5 border-t border-white/10 pt-6 text-xs text-black/30 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} Axxentra. All rights reserved.
-          </p>
+      {/* Bottom */}
+      <div className="flex flex-col gap-5 border-t border-white/10 pt-6 text-xs text-black/30 md:flex-row md:items-center md:justify-between">
+        <p>
+          © {new Date().getFullYear()} Axxentra. All rights reserved.
+        </p>
 
-          <div className="flex gap-6">
-            {/* <Link
+        <div className="flex gap-6">
+          {/* <Link
               href="#"
               className="transition-colors hover:text-black"
             >
@@ -176,10 +175,9 @@ export default function Footer() {
             >
               Terms
             </Link> */}
-          </div>
-
-          <p>Built with intention.</p>
         </div>
+
+        <p>Built with intention.</p>
       </div>
     </footer>
   );
