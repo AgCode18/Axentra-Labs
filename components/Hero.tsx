@@ -1,3 +1,5 @@
+"use client"
+
 // import { LogoMark } from "./Logo";
 
 export function Hero() {

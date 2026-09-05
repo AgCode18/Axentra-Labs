@@ -121,49 +121,49 @@ export async function POST(request: Request) {
       requestBody: {
         values: [
           [
-            // A - Date
+
             new Date().toLocaleString("en-IN"),
 
-            // B - Name
+
             name,
 
-            // C - Email
+
             email,
 
-            // D - Phone
+
             phone,
 
-            // E - Company
+
             company || "",
 
-            // F - Service
+
             service,
 
-            // G - Budget
+
             budget || "",
 
-            // H - Message
+
             message,
 
-            // I - IP Address
+
             ip,
 
-            // J - Country
+
             country,
 
-            // K - Region
+
             region,
 
-            // L - City
+
             city,
 
-            // M - Latitude
+
             latitude,
 
-            // N - Longitude
+
             longitude,
 
-            // O - Timezone
+
             timezone,
           ],
         ],
