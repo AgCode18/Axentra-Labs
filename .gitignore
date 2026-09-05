@@ -5,6 +5,8 @@ node_modules/
 out/
 .next
 
+README.md
+
 # Environment variables
 .env
 .env.local

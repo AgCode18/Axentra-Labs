@@ -53,7 +53,8 @@ import GSAPAnimations from "@/components/GSAPAnimations";
 import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "Axxentra Labs",
+  title: "Axentra Labs",
+  icons: "/axxe2.png",
   description: "We build digital products that move businesses forward.",
 };
 
