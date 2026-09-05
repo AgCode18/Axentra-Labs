@@ -4,7 +4,7 @@ const PLANS = [
   {
     name: "Landing Page",
     desc: "A single high-converting page, designed and built fast.",
-    price: "₹3,499",
+    price: "₹5,999",
     period: "Domain + Hosting",
     features: [
       "Live in 5 days",

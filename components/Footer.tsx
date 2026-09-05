@@ -133,7 +133,27 @@ export default function Footer() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
           ))}
+=======
+
+            <div>
+              <span className="font-mono text-[11px] tracking-widest text-muted-2">CONTACT</span>
+              <ul className="mt-4 space-y-3">
+                <li>
+                  <a href="mailto:axentralabsofficial@gmail.com" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
+                    axentralabsofficial@gmail.com
+                  </a> <br />
+                  
+                  <a href="tel:+917665227565" className="link-underline text-sm text-black hover:text-fog transition-colors pb-0.5">
+                    +91 76652 27565
+                  </a>
+                </li>
+                <li className="text-sm text-black">Jaipur, India</li>
+              </ul>
+            </div>
+          </div>
+>>>>>>> d99a6ce633a5b8d1e2ffb1858f0f7b349e8c4912
         </div>
 
         {/* Bottom */}
