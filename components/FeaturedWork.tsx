@@ -97,27 +97,6 @@ export default function FeaturedWork() {
           );
         }
 
-        /*
-        ================================================
-        PREVIOUS CARD STACK ANIMATION
-        ================================================
-        */
-
-        if (index === 0) return;
-
-        const previousCard = cards[index - 1];
-
-        gsap.to(previousCard, {
-          scale: 0.94,
-          y: -10,
-          ease: "none",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            end: "top 24%",
-            scrub: true,
-          },
-        });
       });
 
       ScrollTrigger.refresh();
@@ -278,37 +257,15 @@ export default function FeaturedWork() {
         <div className="relative">
 
           {projects.map((project, index) => (
-            /*
-            =================================================
-            CARD WRAPPER
-
-            This wrapper creates the scroll distance
-            required for sticky stacking.
-            =================================================
-            */
-
-            <div
-              key={`wrapper-${project.number}`}
-              className="relative h-[620px] md:h-[680px]"
+            <article
+              key={project.number}
+              className="work-card sticky top-24 mb-8 min-h-[480px] overflow-hidden rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.18)] md:min-h-[520px]"
+              style={{
+                backgroundColor: project.background,
+                color: project.textColor,
+                zIndex: index + 1,
+              }}
             >
-              <article
-                className="work-card sticky top-24 overflow-hidden rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.18)]"
-                style={{
-                  backgroundColor: project.background,
-                  color: project.textColor,
-
-                  /*
-                  Later cards have higher z-index.
-                  Therefore:
-
-                  Card 2 > Card 1
-                  Card 3 > Card 2
-                  Card 4 > Card 3
-                  */
-
-                  zIndex: index + 1,
-                }}
-              >
                 <div className="relative min-h-[480px] p-7 md:min-h-[520px] md:p-9 lg:p-10">
 
                   {/* =================================================
@@ -392,8 +349,7 @@ export default function FeaturedWork() {
                     {String(index + 1).padStart(2, "0")}
                   </span> */}
                 </div>
-              </article>
-            </div>
+            </article>
           ))}
         </div>
       </div>

@@ -1,100 +1,10 @@
-// 'use client';
-
-// import Image from 'next/image';
-
-// const STACK = [
-//   'NEXT.JS',
-//   'TAILWIND CSS',
-//   'TYPESCRIPT',
-//   'POSTGRESQL',
-//   'PRISMA',
-//   'STRIPE',
-//   'SUPABASE',
-//   'VERCEL',
-//   'NODE.JS',
-//   'REACT',
-// ];
-
-// // Map each tech to its Simple Icons slug
-// const techSlugs: Record<string, string> = {
-//   'NEXT.JS': 'nextdotjs',
-//   'TAILWIND CSS': 'tailwindcss',
-//   TYPESCRIPT: 'typescript',
-//   POSTGRESQL: 'postgresql',
-//   PRISMA: 'prisma',
-//   STRIPE: 'stripe',
-//   SUPABASE: 'supabase',
-//   VERCEL: 'vercel',
-//   'NODE.JS': 'nodedotjs',
-//   REACT: 'react',
-// };
-
-// export function TechMarquee() {
-//   const items = [...STACK, ...STACK]; // duplicate for seamless loop
-
-//   return (
-//     <>
-//       <style jsx>{`
-//         .marquee-track {
-//           animation: marqueeScroll 20s linear infinite;
-//         }
-//         .marquee-track:hover {
-//           animation-play-state: paused;
-//         }
-//         @keyframes marqueeScroll {
-//           0% {
-//             transform: translateX(0);
-//           }
-//           100% {
-//             transform: translateX(-50%);
-//           }
-//         }
-//       `}</style>
-
-//       <div className="bg-surface border-b border-line-soft py-7 overflow-hidden relative">
-//         {/* Left gradient fade */}
-//         <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-surface to-transparent" />
-
-//         <div className="flex whitespace-nowrap marquee-track">
-//           {items.map((item, i) => {
-//             const slug = techSlugs[item];
-//             return (
-//               <div
-//                 key={i}
-//                 className="flex items-center gap-3 px-6 transition-colors duration-300 hover:text-blue"
-//               >
-//                 <Image
-//                   src={`https://cdn.simpleicons.org/${slug}`}
-//                   alt={item}
-//                   width={28}
-//                   height={28}
-//                   className="object-contain"
-//                   draggable={false}
-//                   unoptimized // external SVGs
-//                 />
-//                 <span className="font-mono text-xs tracking-[0.2em] text-black">
-//                   {item}
-//                 </span>
-//                 <span className="h-1 w-1 rounded-full bg-line" />
-//               </div>
-//             );
-//           })}
-//         </div>
-
-//         {/* Right gradient fade */}
-//         <div className="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-surface to-transparent" />
-//       </div>
-//     </>
-//   );
-// }
-
-
-
-
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const technologies = [
   "Next.js",
@@ -123,19 +33,25 @@ export default function TechMarquee() {
 
       if (!rowOne || !rowTwo) return;
 
+      /*
+       * Because the technologies are duplicated,
+       * half of the scrollWidth represents one complete set.
+       */
       const firstRowWidth = rowOne.scrollWidth / 2;
       const secondRowWidth = rowTwo.scrollWidth / 2;
 
-      const tl = gsap.timeline({
+      // Row 1 → moves left
+      const tl1 = gsap.timeline({
         repeat: -1,
       });
 
-      tl.to(rowOne, {
+      tl1.to(rowOne, {
         x: -firstRowWidth,
         duration: 25,
         ease: "none",
       });
 
+      // Row 2 → moves right
       const tl2 = gsap.timeline({
         repeat: -1,
       });
@@ -152,80 +68,198 @@ export default function TechMarquee() {
         }
       );
 
-      // Section reveal
-      gsap.from(".tech-header", {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
+      // Header reveal
+      gsap.fromTo(
+        ".tech-header",
+        {
+          y: 50,
+          opacity: 0,
         },
-      });
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            once: true,
+          },
+        }
+      );
     }, sectionRef);
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+    };
   }, []);
 
   const renderTechnologies = () =>
     [...technologies, ...technologies].map((tech, index) => (
       <div
         key={`${tech}-${index}`}
-        className="flex shrink-0 items-center gap-8"
+        className="
+          flex
+          shrink-0
+          items-center
+          gap-5
+          md:gap-8
+        "
       >
-        <span className="text-5xl font-medium tracking-[-0.04em] md:text-7xl">
+        <span
+          className="
+            whitespace-nowrap
+            text-[2.75rem]
+            font-medium
+            leading-none
+            tracking-[-0.04em]
+            md:text-7xl
+          "
+        >
           {tech}
         </span>
 
-        <span className="text-2xl text-black md:text-4xl">✦</span>
+        <span
+          className="
+            shrink-0
+            text-xl
+            text-[#4B20FF]
+            md:text-4xl
+          "
+        >
+          ✦
+        </span>
       </div>
     ));
 
   return (
     <section
       ref={sectionRef}
-      className="overflow-hidden  py-28 text-black md:py-40"
+      className="
+        relative
+        w-full
+        max-w-full
+        overflow-hidden
+        py-24
+        text-black
+        md:py-36
+      "
     >
-      <div className="mx-auto mb-20 px-5 md:px-8">
-        <div className="">
+      {/* HEADER */}
+      <div
+        className="
+          tech-header
+          mx-auto
+          mb-16
+          w-full
+          max-w-7xl
+          px-5
+          md:mb-20
+          md:px-8
+        "
+      >
+        <div className="w-full min-w-0">
+          <h2
+            className="
+              w-full
+              max-w-5xl
+              text-center
+              text-[2.75rem]
+              font-semibold
+              leading-[0.95]
+              tracking-[-0.055em]
+              md:text-7xl
+              lg:text-8xl
+            "
+          >
+            Built with modern{" "}
+            <span className="text-blue-700">
+              technology.
+            </span>
+          </h2>
 
-
-          <div>
-            <h2 className="text-5xl text-center justify-center font-semibold leading-[0.95] tracking-[-0.055em] md:text-8xl whitespace-nowrap">Built with modern <span className="text-blue-700">technology.</span></h2>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/45">
-              We use a modern development stack to build fast, scalable and
-              maintainable digital products.
-            </p>
-          </div>
+          <p
+            className="
+              mx-auto
+              mt-6
+              max-w-2xl
+              text-center
+              text-base
+              leading-relaxed
+              text-black/55
+              md:mt-8
+              md:text-lg
+            "
+          >
+            We use a modern development stack to build fast,
+            scalable and maintainable digital products.
+          </p>
         </div>
       </div>
 
-      {/* Row 1 */}
-      <div className="mb-8 overflow-hidden">
+      {/* ROW 1 */}
+      <div
+        className="
+          w-full
+          max-w-full
+          overflow-hidden
+        "
+      >
         <div
           ref={rowOneRef}
-          className="flex w-max items-center gap-8 whitespace-nowrap"
+          className="
+            flex
+            w-max
+            min-w-max
+            items-center
+            gap-5
+            whitespace-nowrap
+            md:gap-8
+          "
         >
           {renderTechnologies()}
         </div>
       </div>
 
-      {/* Row 2 */}
-      <div className="overflow-hidden">
+      {/* ROW 2 */}
+      <div
+        className="
+          mt-6
+          w-full
+          max-w-full
+          overflow-hidden
+          md:mt-8
+        "
+      >
         <div
           ref={rowTwoRef}
-          className="flex w-max items-center gap-8 whitespace-nowrap"
+          className="
+            flex
+            w-max
+            min-w-max
+            items-center
+            gap-5
+            whitespace-nowrap
+            md:gap-8
+          "
         >
           {renderTechnologies()}
         </div>
       </div>
 
-      {/* Bottom line */}
-      <div className="mx-auto mt-20 max-w-[1400px] px-5 md:px-8">
-        <div className="border-t border-white/15 pt-6">
-
-        </div>
+      {/* BOTTOM LINE */}
+      <div
+        className="
+          mx-auto
+          mt-16
+          w-full
+          max-w-7xl
+          px-5
+          md:mt-20
+          md:px-8
+        "
+      >
+        <div className="border-t border-black/10 pt-6" />
       </div>
     </section>
   );

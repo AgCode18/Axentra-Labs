@@ -45,6 +45,7 @@ export default function About() {
         scrollTrigger: {
           trigger: ".about-heading",
           start: "top 80%",
+          once: true,
         },
       });
 
@@ -57,6 +58,7 @@ export default function About() {
         scrollTrigger: {
           trigger: ".about-description",
           start: "top 80%",
+          once: true,
         },
       });
 
@@ -70,31 +72,38 @@ export default function About() {
         scrollTrigger: {
           trigger: ".stats-grid",
           start: "top 80%",
+          once: true,
         },
       });
 
       // Counter animation
-      gsap.utils.toArray<HTMLElement>(".stat-number").forEach((element) => {
-        const target = Number(element.dataset.value);
+      gsap.utils
+        .toArray<HTMLElement>(".stat-number")
+        .forEach((element) => {
+          const target = Number(element.dataset.value);
 
-        const counter = {
-          value: 0,
-        };
+          const counter = {
+            value: 0,
+          };
 
-        gsap.to(counter, {
-          value: target,
-          duration: 1.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: element,
-            start: "top 85%",
-            once: true,
-          },
-          onUpdate: () => {
-            element.textContent = Math.floor(counter.value).toString();
-          },
+          gsap.to(counter, {
+            value: target,
+            duration: 1.8,
+            ease: "power2.out",
+
+            scrollTrigger: {
+              trigger: element,
+              start: "top 85%",
+              once: true,
+            },
+
+            onUpdate: () => {
+              element.textContent = Math.floor(
+                counter.value
+              ).toString();
+            },
+          });
         });
-      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -104,90 +113,271 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="overflow-hidden bg-[#f5f5f2] px-5 py-28 md:px-8 md:py-40"
+      className="
+        relative
+        w-full
+        max-w-full
+        overflow-hidden
+        bg-[#f5f5f2]
+        px-5
+        py-24
+        md:px-8
+        md:py-40
+      "
     >
-      <div className="mx-auto max-w-[1400px]">
-        {/* Top Label */}
-        <div className="mb-20">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#4B20FF]">
-           About Axxentra
+      <div
+        className="
+          mx-auto
+          w-full
+          max-w-[1400px]
+          min-w-0
+        "
+      >
+        {/* TOP LABEL */}
+        <div className="mb-16 md:mb-20">
+          <p
+            className="
+              text-xs
+              font-medium
+              uppercase
+              tracking-[0.2em]
+              text-[#4B20FF]
+              md:text-sm
+            "
+          >
+            About Axentra
           </p>
         </div>
 
-        {/* Main Heading */}
-        <div className="about-heading max-w-[1200px]">
+        {/* MAIN HEADING */}
+        <div
+          className="
+            about-heading
+            w-full
+            max-w-[1200px]
+            min-w-0
+          "
+        >
           <div className="overflow-hidden">
-            <h2 className="about-heading-line text-5xl font-semibold leading-[0.95] tracking-[-0.06em] md:text-8xl">
+            <h2
+              className="
+                about-heading-line
+                w-full
+                break-words
+                text-[3.25rem]
+                font-semibold
+                leading-[0.95]
+                tracking-[-0.06em]
+                sm:text-6xl
+                md:text-8xl
+              "
+            >
               We turn ideas
             </h2>
           </div>
 
           <div className="overflow-hidden">
-            <h2 className="about-heading-line text-5xl font-semibold leading-[0.95] tracking-[-0.06em] md:text-8xl">
+            <h2
+              className="
+                about-heading-line
+                w-full
+                break-words
+                text-[3.25rem]
+                font-semibold
+                leading-[0.95]
+                tracking-[-0.06em]
+                sm:text-6xl
+                md:text-8xl
+              "
+            >
               into digital
             </h2>
           </div>
 
           <div className="overflow-hidden">
-            <h2 className="about-heading-line text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-[#4B20FF] md:text-8xl">
+            <h2
+              className="
+                about-heading-line
+                w-full
+                break-words
+                text-[3.25rem]
+                font-semibold
+                leading-[0.95]
+                tracking-[-0.06em]
+                text-[#4B20FF]
+                sm:text-6xl
+                md:text-8xl
+              "
+            >
               products.
             </h2>
           </div>
         </div>
 
-        {/* Description */}
-        <div className="about-description mt-16 grid gap-10 md:grid-cols-[1fr_1.5fr]">
+        {/* DESCRIPTION */}
+        <div
+          className="
+            about-description
+            mt-14
+            grid
+            min-w-0
+            gap-10
+            md:mt-16
+            md:grid-cols-[1fr_1.5fr]
+          "
+        >
+          {/* LEFT */}
           <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.2em]
+                text-neutral-400
+                md:text-sm
+              "
+            >
               Who we are
             </p>
           </div>
 
-          <div>
-            <p className="max-w-3xl text-2xl leading-[1.25] tracking-[-0.02em] text-neutral-700 md:text-4xl">
-              Axxentra is a digital product studio focused on building
-              high-performance websites, SaaS platforms, MVPs and
-              AI-powered digital solutions.
+          {/* RIGHT */}
+          <div className="min-w-0">
+            <p
+              className="
+                max-w-3xl
+                break-words
+                text-[1.75rem]
+                leading-[1.2]
+                tracking-[-0.025em]
+                text-neutral-700
+                sm:text-3xl
+                md:text-4xl
+              "
+            >
+              Axentra is a digital product studio focused on
+              building high-performance websites, SaaS
+              platforms, MVPs and AI-powered digital solutions.
             </p>
 
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-neutral-500 md:text-lg">
-              We combine thoughtful design with modern engineering to create
-              products that are fast, scalable and built around real
-              business goals.
+            <p
+              className="
+                mt-8
+                max-w-2xl
+                break-words
+                text-base
+                leading-relaxed
+                text-neutral-500
+                md:text-lg
+              "
+            >
+              We combine thoughtful design with modern
+              engineering to create products that are fast,
+              scalable and built around real business goals.
             </p>
 
             <motion.a
               href="#contact"
-              whileHover={{ x: 8 }}
-              transition={{ duration: 0.3 }}
-              className="mt-10 inline-flex items-center gap-3 border-b border-[#4B20FF] pb-2 text-sm font-medium text-[#4B20FF]"
+              whileHover={{
+                x: 8,
+              }}
+              transition={{
+                duration: 0.3,
+              }}
+              className="
+                mt-10
+                inline-flex
+                max-w-full
+                items-center
+                gap-3
+                border-b
+                border-[#4B20FF]
+                pb-2
+                text-sm
+                font-medium
+                text-[#4B20FF]
+              "
             >
               Work with us
             </motion.a>
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="stats-grid mt-28 grid border-y border-black/15 md:grid-cols-4">
+        {/* STATS */}
+        <div
+          className="
+            stats-grid
+            mt-20
+            grid
+            w-full
+            max-w-full
+            border-y
+            border-black/15
+            md:mt-28
+            md:grid-cols-4
+          "
+        >
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="stat-item border-b border-black/15 px-0 py-10 md:border-b-0 md:border-r md:px-8 md:py-12 md:first:pl-0 md:last:border-r-0"
+              className="
+                stat-item
+                min-w-0
+                border-b
+                border-black/15
+                px-0
+                py-8
+                last:border-b-0
+                md:border-b-0
+                md:border-r
+                md:px-8
+                md:py-12
+                md:first:pl-0
+                md:last:border-r-0
+              "
             >
-              <div className="flex items-start">
+              <div className="flex min-w-0 items-start">
                 <span
                   data-value={stat.value}
-                  className="stat-number text-6xl font-semibold leading-none tracking-[-0.06em] md:text-7xl"
+                  className="
+                    stat-number
+                    min-w-0
+                    break-words
+                    text-5xl
+                    font-semibold
+                    leading-none
+                    tracking-[-0.06em]
+                    sm:text-6xl
+                    md:text-7xl
+                  "
                 >
                   0
                 </span>
 
-                <span className="ml-1 text-3xl font-medium">
+                <span
+                  className="
+                    ml-1
+                    shrink-0
+                    text-2xl
+                    font-medium
+                    md:text-3xl
+                  "
+                >
                   {stat.suffix}
                 </span>
               </div>
 
-              <p className="mt-5 text-sm uppercase tracking-[0.15em] text-neutral-500">
+              <p
+                className="
+                  mt-4
+                  text-xs
+                  uppercase
+                  tracking-[0.15em]
+                  text-neutral-500
+                  md:mt-5
+                  md:text-sm
+                "
+              >
                 {stat.label}
               </p>
             </div>

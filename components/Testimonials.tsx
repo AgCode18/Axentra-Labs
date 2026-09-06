@@ -19,7 +19,7 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     quote:
-      "Axxentra understood what we wanted and turned the idea into a clean, functional product without unnecessary complexity.",
+      "Axentra understood what we wanted and turned the idea into a clean, functional product without unnecessary complexity.",
     name: "Client Name",
     role: "Founder, Company",
     initials: "CN",
@@ -59,7 +59,7 @@ const testimonials: Testimonial[] = [
   {
     id: 6,
     quote:
-      "Axxentra helped us move from an early concept to a working product much faster than we expected.",
+      "Axentra helped us move from an early concept to a working product much faster than we expected.",
     name: "Client Name",
     role: "Product Manager",
     initials: "CN",
@@ -93,15 +93,15 @@ const testimonials: Testimonial[] = [
 const columns = [
   {
     testimonials: testimonials.slice(0, 3),
-    animation: "testimonial-scroll-1",
+    animationClass: "testimonial-scroll-up",
   },
   {
     testimonials: testimonials.slice(3, 6),
-    animation: "testimonial-scroll-2",
+    animationClass: "testimonial-scroll-down",
   },
   {
     testimonials: testimonials.slice(6, 9),
-    animation: "testimonial-scroll-3",
+    animationClass: "testimonial-scroll-up-slow",
   },
 ];
 
@@ -109,32 +109,46 @@ export default function Testimonials() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
+    const section = sectionRef.current;
+
+    if (!section) return;
+
     const ctx = gsap.context(() => {
+      /* =========================================================
+         HEADER REVEAL
+      ========================================================= */
+
       gsap.from(".testimonial-header", {
-        y: 80,
+        y: 70,
         opacity: 0,
         duration: 1,
         ease: "power4.out",
         scrollTrigger: {
           trigger: ".testimonial-header",
-          start: "top 80%",
+          start: "top 82%",
           once: true,
         },
       });
 
+      /* =========================================================
+         TESTIMONIAL CONTAINER REVEAL
+      ========================================================= */
+
       gsap.from(".testimonial-container", {
-        y: 80,
+        y: 60,
         opacity: 0,
         duration: 1,
         delay: 0.15,
         ease: "power4.out",
         scrollTrigger: {
           trigger: ".testimonial-container",
-          start: "top 80%",
+          start: "top 82%",
           once: true,
         },
       });
-    }, sectionRef);
+
+      ScrollTrigger.refresh();
+    }, section);
 
     return () => ctx.revert();
   }, []);
@@ -144,57 +158,65 @@ export default function Testimonials() {
       ref={sectionRef}
       className="relative overflow-hidden bg-[#f7f7f5] px-5 py-24 md:px-8 md:py-32"
     >
+      {/* =========================================================
+          MARQUEE ANIMATIONS
+      ========================================================= */}
+
       <style jsx>{`
-        @keyframes testimonial-scroll-1 {
+        @keyframes testimonial-up {
           from {
             transform: translateY(0);
           }
 
           to {
-            transform: translateY(-50%);
+            transform: translateY(calc(-50% - 10px));
           }
         }
 
-        @keyframes testimonial-scroll-2 {
+        @keyframes testimonial-down {
           from {
-            transform: translateY(0);
+            transform: translateY(calc(-50% - 10px));
           }
 
           to {
-            transform: translateY(-50%);
-          }
-        }
-
-        @keyframes testimonial-scroll-3 {
-          from {
             transform: translateY(0);
           }
-
-          to {
-            transform: translateY(-50%);
-          }
         }
 
-        .testimonial-scroll-1 {
-          animation: testimonial-scroll-1 26s linear infinite;
+        .testimonial-scroll-up {
+          animation: testimonial-up 28s linear infinite;
+          will-change: transform;
         }
 
-        .testimonial-scroll-2 {
-          animation: testimonial-scroll-2 32s linear infinite;
+        .testimonial-scroll-down {
+          animation: testimonial-down 34s linear infinite;
+          will-change: transform;
         }
 
-        .testimonial-scroll-3 {
-          animation: testimonial-scroll-3 23s linear infinite;
+        .testimonial-scroll-up-slow {
+          animation: testimonial-up 31s linear infinite;
+          will-change: transform;
         }
 
-        .testimonial-scroll-1:hover,
-        .testimonial-scroll-2:hover,
-        .testimonial-scroll-3:hover {
+        .testimonial-column:hover .testimonial-scroll-up,
+        .testimonial-column:hover .testimonial-scroll-down,
+        .testimonial-column:hover .testimonial-scroll-up-slow {
           animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .testimonial-scroll-up,
+          .testimonial-scroll-down,
+          .testimonial-scroll-up-slow {
+            animation: none;
+          }
         }
       `}</style>
 
-      {/* Ambient Purple / Lime Glow */}
+      {/* =========================================================
+          BACKGROUND GLOW
+      ========================================================= */}
+
       <div
         className="
           pointer-events-none
@@ -224,7 +246,10 @@ export default function Testimonials() {
       />
 
       <div className="relative z-10 mx-auto max-w-[1400px]">
-        {/* Header */}
+        {/* =========================================================
+            HEADER
+        ========================================================= */}
+
         <div className="testimonial-header mb-16 text-center md:mb-20">
           <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-neutral-400">
             Client Stories
@@ -258,14 +283,18 @@ export default function Testimonials() {
               md:text-lg
             "
           >
-            Real experiences from businesses that trusted Axxentra to turn
+            Real experiences from businesses that trusted Axentra to turn
             ideas into fast, scalable and meaningful digital products.
           </p>
         </div>
 
-        {/* Testimonials */}
+        {/* =========================================================
+            TESTIMONIAL MARQUEE
+        ========================================================= */}
+
         <div className="testimonial-container relative">
-          {/* Top Fade */}
+          {/* TOP FADE */}
+
           <div
             className="
               pointer-events-none
@@ -273,7 +302,7 @@ export default function Testimonials() {
               inset-x-0
               top-0
               z-20
-              h-36
+              h-40
               bg-gradient-to-b
               from-[#f7f7f5]
               via-[#f7f7f5]/90
@@ -281,7 +310,8 @@ export default function Testimonials() {
             "
           />
 
-          {/* Bottom Fade */}
+          {/* BOTTOM FADE */}
+
           <div
             className="
               pointer-events-none
@@ -289,7 +319,7 @@ export default function Testimonials() {
               inset-x-0
               bottom-0
               z-20
-              h-36
+              h-40
               bg-gradient-to-t
               from-[#f7f7f5]
               via-[#f7f7f5]/90
@@ -312,6 +342,7 @@ export default function Testimonials() {
               <div
                 key={columnIndex}
                 className={`
+                  testimonial-column
                   overflow-hidden
                   ${
                     columnIndex === 1
@@ -325,29 +356,45 @@ export default function Testimonials() {
                   }
                 `}
               >
-                <div className={column.animation}>
-                  {/* Original cards */}
-                  {column.testimonials.map((testimonial) => (
-                    <TestimonialCard
-                      key={`first-${testimonial.id}`}
-                      testimonial={testimonial}
-                    />
-                  ))}
+                <div className={column.animationClass}>
+                  {/* FIRST SET */}
 
-                  {/* Duplicate cards for infinite loop */}
-                  {column.testimonials.map((testimonial) => (
-                    <TestimonialCard
-                      key={`second-${testimonial.id}`}
-                      testimonial={testimonial}
-                    />
-                  ))}
+                  <div className="flex flex-col gap-5">
+                    {column.testimonials.map((testimonial) => (
+                      <TestimonialCard
+                        key={`first-${testimonial.id}`}
+                        testimonial={testimonial}
+                      />
+                    ))}
+                  </div>
+
+                  {/* DUPLICATE SET */}
+
+                  <div
+                    className="
+                      mt-5
+                      flex
+                      flex-col
+                      gap-5
+                    "
+                  >
+                    {column.testimonials.map((testimonial) => (
+                      <TestimonialCard
+                        key={`second-${testimonial.id}`}
+                        testimonial={testimonial}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Bottom Trust Line */}
+        {/* =========================================================
+            BOTTOM TRUST LINE
+        ========================================================= */}
+
         <div
           className="
             mt-16
@@ -389,6 +436,10 @@ export default function Testimonials() {
   );
 }
 
+/* ===============================================================
+   TESTIMONIAL CARD
+================================================================ */
+
 function TestimonialCard({
   testimonial,
 }: {
@@ -398,7 +449,6 @@ function TestimonialCard({
     <motion.article
       className="
         group
-        mb-5
         rounded-[24px]
         border
         border-black/[0.08]
@@ -419,7 +469,10 @@ function TestimonialCard({
         ease: [0.22, 1, 0.36, 1],
       }}
     >
-      {/* Quote Icon */}
+      {/* =========================================================
+          QUOTE ICON
+      ========================================================= */}
+
       <div className="mb-6">
         <svg
           width="21"
@@ -427,6 +480,7 @@ function TestimonialCard({
           viewBox="0 0 21 15"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
         >
           <g
             stroke="#4B20FF"
@@ -440,7 +494,10 @@ function TestimonialCard({
         </svg>
       </div>
 
-      {/* Quote */}
+      {/* =========================================================
+          QUOTE
+      ========================================================= */}
+
       <p
         className="
           mb-7
@@ -453,7 +510,10 @@ function TestimonialCard({
         {testimonial.quote}
       </p>
 
-      {/* Client */}
+      {/* =========================================================
+          CLIENT
+      ========================================================= */}
+
       <div className="flex items-center gap-3">
         <div
           className="

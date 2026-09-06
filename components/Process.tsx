@@ -105,7 +105,7 @@ export default function Process() {
     <section
       ref={sectionRef}
       id="process"
-      className="relative bg-[#f5f5f2] px-5 py-28 md:px-8 md:py-40"
+      className="relative overflow-x-clip bg-[#f5f5f2] px-5 py-28 md:px-8 md:py-40"
     >
       {/* ============================================
           BACKGROUND
