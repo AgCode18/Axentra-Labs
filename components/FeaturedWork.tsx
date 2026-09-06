@@ -16,7 +16,7 @@ const projects = [
     title: "Loan Management System",
     description:
       "Scalable MVP built for growth. Automated AI workflows, real-time analytics, and enterprise-ready cloud infrastructure.",
-    tags: ["REACT.JS", "NODE.JS", "MYSQL", ""],
+    tags: ["REACT.JS", "NODE.JS", "MYSQL"],
     image: "/projects/lmsimage.png",
     background: "#1826D8",
     textColor: "#FFFFFF",
@@ -33,6 +33,7 @@ const projects = [
     background: "#C7FF00",
     textColor: "#111111",
     accent: "#111111",
+    accentTextColor: "#FFFFFF",
   },
   {
     number: "03 / 04",
@@ -277,7 +278,7 @@ export default function FeaturedWork() {
                       className="rounded-full px-4 py-2 text-[9px] font-black uppercase tracking-[0.14em]"
                       style={{
                         backgroundColor: project.accent,
-                        color: "#111111",
+                        color: project.accentTextColor ?? "#111111",
                       }}
                     >
                       {project.category}
@@ -297,7 +298,7 @@ export default function FeaturedWork() {
                       {project.title}
                     </h3>
 
-                    <p className="mt-6 max-w-xl text-sm leading-6 opacity-70 md:text-base">
+                    <p className="mt-6 max-w-xl text-sm leading-6 text-current opacity-70 md:text-base">
                       {project.description}
                     </p>
 
@@ -307,7 +308,7 @@ export default function FeaturedWork() {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-md border border-current/20 px-3 py-1.5 text-[8px] font-black uppercase tracking-wider opacity-70"
+                          className="rounded-md border border-current/20 px-3 py-1.5 text-[8px] font-black uppercase tracking-wider text-current opacity-70"
                         >
                           {tag}
                         </span>
