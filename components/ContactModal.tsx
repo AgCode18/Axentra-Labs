@@ -105,7 +105,10 @@ export function ContactModal({
             />
 
             {/* Modal */}
-            <div className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl md:p-10">
+            <div
+                data-lenis-prevent
+                className="relative my-4 max-h-[calc(100dvh-2rem)] w-full max-w-2xl touch-pan-y overflow-y-auto overscroll-contain rounded-3xl bg-white p-6 shadow-2xl md:my-8 md:max-h-[calc(100dvh-4rem)] md:p-10"
+            >
                 <button
                     type="button"
                     onClick={onClose}
