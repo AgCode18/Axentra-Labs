@@ -12,48 +12,74 @@ const steps = [
     number: "01",
     title: "Discover",
     description:
-      "We understand your business, users, goals and technical requirements before writing a single line of code.",
+      "We start by understanding your business, target audience, goals, existing challenges, and product requirements. This gives us a clear foundation before design or development begins.",
     points: [
       "Business & product goals",
-      "User requirements",
-      "Technical planning",
-      "Project roadmap",
+      "Target audience & user needs",
+      "Feature & functionality planning",
+      "Technical requirements",
+      "Competitor & market research",
+      "Project scope & roadmap",
     ],
   },
+
   {
     number: "02",
     title: "Design",
     description:
-      "We turn the product strategy into a clear, intuitive and conversion-focused user experience.",
+      "We turn the strategy into a clear and engaging digital experience. Every screen, interaction, and user flow is designed around usability, brand identity, and business objectives.",
     points: [
-      "User flows",
-      "Wireframes",
-      "UI design",
+      "User journeys & flows",
+      "Wireframes & information architecture",
+      "UI/UX design",
+      "Brand-aligned visual system",
       "Responsive layouts",
+      "Interactive prototypes",
     ],
   },
+
   {
     number: "03",
     title: "Develop",
     description:
-      "We build the product using modern technologies with a focus on performance, scalability and maintainability.",
+      "Once the experience is approved, we build the product using modern technologies and clean development practices. We focus on performance, security, scalability, and maintainable code.",
     points: [
       "Frontend development",
-      "Backend & APIs",
+      "Backend & API development",
       "Database architecture",
+      "Third-party integrations",
+      "Authentication & security",
       "Testing & optimization",
     ],
   },
+
   {
     number: "04",
     title: "Launch",
     description:
-      "We deploy, test and optimize the product so it is ready for real users and real business growth.",
+      "We take the finished product from development to production, making sure everything works reliably across devices and environments before it reaches your users.",
     points: [
       "Production deployment",
-      "Performance testing",
-      "Analytics setup",
-      "Post-launch support",
+      "Domain & hosting setup",
+      "Performance optimization",
+      "Cross-device testing",
+      "Analytics & tracking setup",
+      "Final QA & bug fixing",
+    ],
+  },
+
+  {
+    number: "05",
+    title: "Grow",
+    description:
+      "Launching is only the beginning. We continue improving the product based on real user feedback, performance data, and changing business requirements.",
+    points: [
+      "Post-launch monitoring",
+      "Bug fixes & maintenance",
+      "Feature improvements",
+      "Performance optimization",
+      "User feedback analysis",
+      "Ongoing technical support",
     ],
   },
 ];
@@ -185,7 +211,7 @@ export default function Process() {
 
               <div className="process-content relative z-10 flex min-h-[560px] flex-col justify-between p-7 md:min-h-[600px] md:p-12 lg:min-h-[620px] lg:p-16">
 
-           
+
 
                 <div className="flex items-start justify-between">
 
@@ -199,21 +225,21 @@ export default function Process() {
                       </span>
                     </div>
                   </div>
-                  
+
                 </div>
 
-                
+
 
                 <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
 
-                
+
                   <div>
                     <h3 className="text-[clamp(3.5rem,7vw,7rem)] font-medium leading-[0.82] tracking-[-0.07em] text-[#111111]">
                       {step.title}
                     </h3>
                   </div>
 
-               
+
 
                   <div className="max-w-2xl">
 
@@ -221,7 +247,7 @@ export default function Process() {
                       {step.description}
                     </p>
 
-         
+
 
                     <div className="mt-10 grid gap-x-10 gap-y-3 sm:grid-cols-2">
 
@@ -248,7 +274,7 @@ export default function Process() {
                   </div>
                 </div>
 
-                
+
 
                 <div className="flex items-end justify-between border-t border-black/10 pt-6">
 
@@ -268,7 +294,7 @@ export default function Process() {
                 </div>
               </div>
 
-             
+
 
               <div className="absolute bottom-0 left-0 h-1 w-full bg-[#C7FF00]" />
 
@@ -276,7 +302,7 @@ export default function Process() {
           ))}
         </div>
 
-       
+
 
         <motion.div
           className="mt-12 rounded-[30px] bg-[#181818] p-7 text-white md:p-12"
@@ -317,7 +343,7 @@ export default function Process() {
             >
               Start a project
 
-              
+
             </motion.a>
 
           </div>

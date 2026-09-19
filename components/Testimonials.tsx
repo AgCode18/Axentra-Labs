@@ -19,74 +19,82 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     quote:
-      "Axentra understood what we wanted and turned the idea into a clean, functional product without unnecessary complexity.",
-    name: "Client Name",
-    role: "Founder, Company",
-    initials: "CN",
+      "Axentra understood what we needed and turned our idea into a clean, professional website that feels much more aligned with our brand.",
+    name: "Rahul Sharma",
+    role: "Founder, King Fish Logistics",
+    initials: "RS",
   },
+
   {
     id: 2,
     quote:
-      "The development process was straightforward, fast and transparent. The final product was much better than what we initially imagined.",
-    name: "Client Name",
-    role: "Business Owner",
-    initials: "CN",
+      "The development process was smooth and straightforward. The dashboard is clean, responsive, and much easier for our team to work with.",
+    name: "Aman Gupta",
+    role: "Product Manager, API Panel",
+    initials: "AG",
   },
+
   {
     id: 3,
     quote:
-      "From the initial concept to deployment, everything was handled with a strong focus on performance and user experience.",
-    name: "Client Name",
-    role: "Product Lead",
-    initials: "CN",
+      "The team understood the fintech workflow quickly and built a platform that makes managing users, transactions, and operations much more organized.",
+    name: "Vikram Mehta",
+    role: "Founder, Reseller Fintech",
+    initials: "VM",
   },
+
   {
     id: 4,
     quote:
-      "The team brought our idea to life with a strong understanding of both design and development. Everything felt polished and intentional.",
-    name: "Client Name",
-    role: "Startup Founder",
-    initials: "CN",
+      "Axentra gave our salon a modern digital presence that represents our brand much better and makes it easier for customers to explore our services.",
+    name: "Neha Sharma",
+    role: "Owner, Salon",
+    initials: "NS",
   },
+
   {
     id: 5,
     quote:
-      "What stood out most was the attention to detail. The product feels fast, modern and incredibly easy to use.",
-    name: "Client Name",
-    role: "CEO, Company",
-    initials: "CN",
+      "The website looks modern and works smoothly across devices. The overall shopping experience feels much cleaner and easier for our customers.",
+    name: "Mohit Agarwal",
+    role: "Director, O.M. Enterprises",
+    initials: "MA",
   },
+
   {
     id: 6,
     quote:
-      "Axentra helped us move from an early concept to a working product much faster than we expected.",
-    name: "Client Name",
-    role: "Product Manager",
-    initials: "CN",
+      "The loan management system helped us bring different operational processes into one structured platform. The overall workflow is much easier to manage now.",
+    name: "Rohit Jain",
+    role: "Operations Head, Mascot Fin",
+    initials: "RJ",
   },
+
   {
     id: 7,
     quote:
-      "The communication throughout the project was excellent. We always knew what was happening and what came next.",
-    name: "Client Name",
-    role: "Founder, Startup",
-    initials: "CN",
+      "The website has a clean visual identity and smooth interactions. The final result feels modern, polished, and easy for visitors to navigate.",
+    name: "Arjun Verma",
+    role: "Founder, Dentoi",
+    initials: "AV",
   },
+
   {
     id: 8,
     quote:
-      "They focused on solving the actual business problem instead of adding unnecessary features. That made a huge difference.",
-    name: "Client Name",
-    role: "Business Owner",
-    initials: "CN",
+      "The website captures the personality of our cafe really well. The design makes our menu and brand experience much more engaging for customers.",
+    name: "Priya Agarwal",
+    role: "Owner, Latte Laven Cafe",
+    initials: "PA",
   },
+
   {
     id: 9,
     quote:
-      "A strong combination of design, performance and development expertise. We would absolutely work with them again.",
-    name: "Client Name",
-    role: "Founder, Company",
-    initials: "CN",
+      "The platform provides a simple and engaging experience for setting fitness goals and building healthier habits without making things complicated.",
+    name: "Karan Singh",
+    role: "Founder, Quirk",
+    initials: "KS",
   },
 ];
 
@@ -344,15 +352,13 @@ export default function Testimonials() {
                 className={`
                   testimonial-column
                   overflow-hidden
-                  ${
-                    columnIndex === 1
-                      ? "hidden md:block"
-                      : ""
+                  ${columnIndex === 1
+                    ? "hidden md:block"
+                    : ""
                   }
-                  ${
-                    columnIndex === 2
-                      ? "hidden lg:block"
-                      : ""
+                  ${columnIndex === 2
+                    ? "hidden lg:block"
+                    : ""
                   }
                 `}
               >

@@ -10,55 +10,150 @@ import Magnetic from "./Magnetic";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
+  
   {
-    number: "01 / 04",
-    category: "MVP DEVELOPMENT & SAAS",
-    title: "Loan Management System",
-    description:
-      "Scalable MVP built for growth. Automated AI workflows, real-time analytics, and enterprise-ready cloud infrastructure.",
-    tags: ["REACT.JS", "NODE.JS", "MYSQL"],
-    image: "/projects/lmsimage.png",
-    background: "#1826D8",
-    textColor: "#FFFFFF",
-    accent: "#C7FF00",
-  },
-  {
-    number: "02 / 04",
-    category: "WEBSITE DESIGN & BRANDING",
-    title: "King FIsh Logistics",
-    description:
-      "High-converting e-commerce platform designed to elevate brand identity and increase online sales conversion rates.",
-    tags: ["WEB DESIGN", "SHOPIFY PLUS", "3D MOCKUP"],
-    image: "/projects/logistic.png",
-    background: "#C7FF00",
-    textColor: "#111111",
-    accent: "#111111",
-    accentTextColor: "#FFFFFF",
-  },
-  {
-    number: "03 / 04",
-    category: "WEB DEVELOPMENT",
-    title: "Salon",
-    description:
-      "Modern financial management platform with powerful dashboards, automated workflows, and secure user experiences.",
-    tags: ["REACT", "NODE.JS", "MONGODB"],
-    image: "/projects/salon.png",
-    background: "#171717",
-    textColor: "#FFFFFF",
-    accent: "#C7FF00",
-  },
-  {
-    number: "04 / 04",
-    category: "AI & AUTOMATION",
-    title: "E-Commerce",
-    description:
-      "Intelligent automation system that connects business workflows, reduces repetitive tasks, and improves operational efficiency.",
-    tags: ["AI", "AUTOMATION", "EXPRESS"],
-    image: "/projects/e-comi.png",
-    background: "#EDEDED",
-    textColor: "#111111",
-    accent: "#4B20FF",
-  },
+  title: "King Fish Logistics",
+  description:
+    "A modern logistics website designed to present transportation services, build brand trust, and make it easier for customers to explore and connect with the business.",
+  tags: ["WEB DESIGN", "SHOPIFY PLUS", "3D MOCKUP"],
+  image: "/projects/logistic.png",
+  href: "https://www.kingfishlogistics.in/",
+  background: "#C7FF00",
+  textColor: "#111111",
+  accent: "#111111",
+  accentTextColor: "#FFFFFF",
+},
+
+{
+  title: "API Panel",
+  description:
+    "A centralized API management dashboard for managing application data, users, services, and operational workflows through a structured admin interface.",
+  tags: ["REACT.JS", "TAILWINDCSS", "MONGODB"],
+  image: "/projects/api.png",
+  href: "https://apipanel.azzunique.cloud/login",
+  background: "#111111",
+  textColor: "#FFFFFF",
+  accent: "#6C4EFF",
+  accentTextColor: "#FFFFFF",
+},
+
+{
+  title: "Reseller Fintech",
+  description:
+    "A fintech reseller management platform built to manage financial services, transactions, users, and operational activities from a centralized dashboard.",
+  tags: ["REACT.JS", "TAILWINDCSS", "MONGODB"],
+  image: "/projects/reseller.png",
+  href: "https://superadmin.bankfipay.com/",
+  background: "#3E6BFF",
+  textColor: "#FFFFFF",
+  accent: "#C7FF00",
+  accentTextColor: "#111111",
+},
+
+{
+  title: "Salon",
+  description:
+    "A modern salon website focused on showcasing services, presenting the brand professionally, and creating a smooth digital experience for potential customers.",
+  tags: ["REACT", "NODE.JS", "MONGODB"],
+  image: "/projects/salon.png",
+  href: "https://salondummy.vercel.app/",
+  background: "#F5F5F2",
+  textColor: "#111111",
+  accent: "#FF6B35",
+  accentTextColor: "#FFFFFF",
+},
+
+{
+  title: "E-Commerce",
+  description:
+    "An e-commerce platform designed to showcase products, simplify online shopping, and provide customers with a clean and responsive purchasing experience.",
+  tags: ["REACT.JS", "TAILWINDCSS", "MONGODB"],
+  image: "/projects/e-comi.png",
+  href: "https://omenterprisesjpr.com/",
+  background: "#6C4EFF",
+  textColor: "#FFFFFF",
+  accent: "#C7FF00",
+  accentTextColor: "#111111",
+},
+
+{
+  title: "Loan Management System",
+  description:
+    "A loan management platform for handling customers, loan applications, repayment workflows, financial records, and day-to-day lending operations.",
+  tags: ["REACT.JS", "NODE.JS", "MYSQL"],
+  image: "/projects/lmsimage.png",
+  href: "https://mascotfin.com/",
+  background: "#1826D8",
+  textColor: "#FFFFFF",
+  accent: "#22D3EE",
+  accentTextColor: "#111111",
+},
+
+{
+  title: "Dentoi",
+  description:
+    "A modern dental website designed to showcase dental services, communicate the brand clearly, and provide visitors with an engaging and easy-to-navigate experience.",
+  tags: ["REACT.JS", "TAILWINDCSS", "GSAP"],
+  image: "/projects/dental.png",
+  href: "https://dainteldummy.vercel.app/",
+  background: "#E9F7F5",
+  textColor: "#111111",
+  accent: "#0F766E",
+  accentTextColor: "#FFFFFF",
+},
+
+{
+  title: "Latte Laven Cafe",
+  description:
+    "A visually rich cafe website created to showcase the cafe's brand, menu, atmosphere, and offerings through an engaging digital experience.",
+  tags: ["REACT.JS", "TAILWINDCSS", "MONGODB"],
+  image: "/projects/P-3.png",
+  href: "https://cafedummy.vercel.app/",
+  background: "#F3E8D0",
+  textColor: "#2B2118",
+  accent: "#8B5E34",
+  accentTextColor: "#FFFFFF",
+},
+
+{
+  title: "Quirk",
+  description:
+    "A health and fitness platform that helps users set realistic goals, track their progress, and build consistent habits through a simple and engaging experience.",
+  tags: ["REACT.JS", "TAILWINDCSS", "MONGODB"],
+  image: "/projects/p-1.png",
+  href: "https://gymdummy.vercel.app/",
+  background: "#DDF7E8",
+  textColor: "#10251A",
+  accent: "#16A34A",
+  accentTextColor: "#FFFFFF",
+},
+
+// {
+//   title: "Travel Bug",
+//   description:
+//     "An immersive travel platform designed to inspire exploration through destination-focused content, interactive sections, and smooth animations.",
+//   tags: ["REACT.JS", "TAILWINDCSS", "MONGODB", "FIGMA"],
+//   image: "/projects/e-comi.png",
+//   href: "https://cozy-llama-cc3aa2.netlify.app/",
+//   background: "#DFF4FF",
+//   textColor: "#10212B",
+//   accent: "#0284C7",
+//   accentTextColor: "#FFFFFF",
+// },
+
+{
+  title: "Real Estate",
+  description:
+    "A modern real estate website designed to showcase properties clearly and provide users with a clean, intuitive experience for exploring available listings.",
+  tags: ["NEXT.JS", "TAILWINDCSS", "FIGMA"],
+  image: "/projects/realstate.png",
+  href: "https://real-estate-phi-blond.vercel.app/",
+  background: "#EFEAFF",
+  textColor: "#20173A",
+  accent: "#7C3AED",
+  accentTextColor: "#FFFFFF",
+},  
+
 ];
 
 export default function FeaturedWork() {
@@ -152,7 +247,7 @@ export default function FeaturedWork() {
               design, scalable MVP development, SaaS
               platforms, and AI automation projects.
             </p>
-            
+
           </div>
         </div>
       </div>
@@ -259,7 +354,7 @@ export default function FeaturedWork() {
 
           {projects.map((project, index) => (
             <article
-              key={project.number}
+              // key={project.number}
               className="work-card sticky top-24 mb-8 min-h-[480px] overflow-hidden rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.18)] md:min-h-[520px]"
               style={{
                 backgroundColor: project.background,
@@ -267,89 +362,81 @@ export default function FeaturedWork() {
                 zIndex: index + 1,
               }}
             >
-                <div className="relative min-h-[480px] p-7 md:min-h-[520px] md:p-9 lg:p-10">
+              <div className="relative min-h-[480px] p-7 md:min-h-[520px] md:p-9 lg:p-10">
 
-                  {/* =================================================
+                {/* =================================================
                       TOP ROW
                   ================================================= */}
 
-                  <div className="flex items-start justify-between gap-4">
-                    <span
-                      className="rounded-full px-4 py-2 text-[9px] font-black uppercase tracking-[0.14em]"
-                      style={{
-                        backgroundColor: project.accent,
-                        color: project.accentTextColor ?? "#111111",
-                      }}
-                    >
-                      {project.category}
-                    </span>
+                <div className="flex items-start justify-between gap-4">
+                 
+                  <span className="text-sm font-black opacity-40 md:text-lg">
+                    {/* {project.number} */}
+                  </span>
+                </div>
 
-                    <span className="text-sm font-black opacity-40 md:text-lg">
-                      {/* {project.number} */}
-                    </span>
-                  </div>
-
-                  {/* =================================================
+                {/* =================================================
                       CONTENT
                   ================================================= */}
 
-                  <div className="mt-8 max-w-[62%] md:mt-10">
-                    <h3 className="text-[clamp(2.2rem,4vw,4.5rem)] font-black uppercase leading-[0.85] tracking-[-0.055em]">
-                      {project.title}
-                    </h3>
+                <div className="mt-8 max-w-[62%] md:mt-10">
+                  <h3 className="text-[clamp(2.2rem,4vw,4.5rem)] font-black uppercase leading-[0.85] tracking-[-0.055em]">
+                    {project.title}
+                  </h3>
 
-                    <p className="mt-6 max-w-xl text-sm leading-6 text-current opacity-70 md:text-base">
-                      {project.description}
-                    </p>
+                  <p className="mt-6 max-w-xl text-sm leading-6 text-current opacity-70 md:text-base">
+                    {project.description}
+                  </p>
 
-                    {/* TAGS */}
+                  {/* TAGS */}
 
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-md border border-current/20 px-3 py-1.5 text-[8px] font-black uppercase tracking-wider text-current opacity-70"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* CTA */}
-
-                    
-                      <Link
-                        href="#contact"
-                        className="mt-7 inline-flex items-center gap-3 border border-current px-5 py-3 text-[9px] font-black uppercase tracking-wider transition-all duration-300 hover:bg-black hover:text-white"
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-md border border-current/20 px-3 py-1.5 text-[8px] font-black uppercase tracking-wider text-current opacity-70"
                       >
-                        Get free quote
-                      </Link>
-                   
+                        {tag}
+                      </span>
+                    ))}
                   </div>
 
-                  {/* =================================================
+                  {/* CTA */}
+
+
+                  <Link
+                    href={project.href}
+                    target="_self"
+                    className="mt-7 inline-flex items-center gap-3 border border-current px-5 py-3 text-[9px] font-black uppercase tracking-wider transition-all duration-300 hover:bg-black hover:text-white"
+                  >
+                    View project
+                  </Link>
+
+                </div>
+
+                {/* =================================================
                       IMAGE
                   ================================================= */}
 
-                  <div className="absolute bottom-8 right-7 h-[190px] w-[35%] overflow-hidden rounded-2xl border border-black/20 bg-black md:bottom-10 md:right-10 md:h-[210px] lg:h-[220px]">
-                    <div className="work-card-image relative h-full w-full">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                <div className="absolute bottom-8 right-7 h-[190px] w-[35%] overflow-hidden rounded-2xl border border-black/20 bg-black md:bottom-10 md:right-10 md:h-[210px] lg:h-[220px]">
+                  <div className="work-card-image relative h-full w-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
+                </div>
 
-                  {/* =================================================
+                {/* =================================================
                       DECORATIVE NUMBER
                   ================================================= */}
 
-                  {/* <span className="pointer-events-none absolute bottom-[-25px] right-[-10px] text-[180px] font-black leading-none opacity-[0.05]">
+                {/* <span className="pointer-events-none absolute bottom-[-25px] right-[-10px] text-[180px] font-black leading-none opacity-[0.05]">
                     {String(index + 1).padStart(2, "0")}
                   </span> */}
-                </div>
+              </div>
             </article>
           ))}
         </div>
