@@ -12,6 +12,13 @@ const services = [
       "High-performance websites and web applications built to turn attention into measurable business growth.",
     tags: ["Next.js", "React", "Node.js"],
   },
+   {
+    // number: "01",
+    title: "App Development",
+    description:
+      "High-performance applications built to turn attention into measurable business growth.",
+    tags: ["React Native", "Flutter"],
+  },
   {
     // number: "02",
     title: "Graphic Design",
